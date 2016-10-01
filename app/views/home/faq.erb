@@ -1,0 +1,66 @@
+    <!-- Page Content -->
+    <div class="container" style="margin-top: 80px">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">야한 시(詩) 쓰기
+                    <small>익명 야한시 콘테스트</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <!--글쓰기 페이지 링크버튼 만들기-->
+        <div class="container" style="text-align: right; margin-bottom: 20px">
+            <a href="/home/write" style="margin-right:50px">
+                <button type="button" class="btn btn-default" style="center">글쓰기</button>
+            </a>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <!--부트스트랩에서 예쁜거 가져오기-->
+                <!--글쓴 내용-->
+                <div class="panel-group" id="accordion">
+                    <% @contents.each do |p| %>
+                    <div class="panel panel-default">
+                        <div>
+                            <div class="panel-body">
+                            
+                                <!--방법1. 루비온레일즈의 simple_format 함수를 이용-->
+                                <!--<%= simple_format(p.content) %>-->
+                                
+                                <!--방법2. 루비 함수 gsub를 이용해서 치환하고 
+                                .html_safe함수를 써서 <br>이 띄어쓰기로 되게.
+                                만약 .html_safe를 쓰지 않으면 <br>이 그대로 출력됨-->
+                                <%= p.content.gsub(/\n/, '<br>').html_safe %>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <%end%>
+                </div>
+            </div>
+        </div>
+        <!--야한시 삭제버튼-->
+        <!--<a href="/destroyall">-->
+        <!--    <button class="btn btn-default" style="margin-top:15px">모두삭제</button>-->
+        <!--</a>-->
+
+        <hr>
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/assets/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/bootstrap.js"></script>
+
+
+                 

@@ -1,0 +1,23 @@
+<div class="container" style="margin-top:200px; margin-bottom:100px">
+    <cneter>
+        <table style="width:100%">
+          <tr>
+            <th>date</th>
+            <th>name</th> 
+            <th>phone number</th>
+            <th>set</th>
+            <th>price</th>
+          </tr>
+          <% @orderlist.each do |o| %>
+            <tr>
+                <td><%= o.created_at%></td>
+                <td><%= o.name %></td>
+                <td><%= o.tel %></td>
+                <td><%= o.setnumber %></td>
+                <td><%= o.allprice %></td>
+            </tr>
+          <%end%>
+        </table>
+    </cneter>
+</div>
+<hr>
