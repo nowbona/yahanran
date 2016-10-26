@@ -2,6 +2,7 @@ class HomeController < ApplicationController
 
 
     def about
+        @weeks
     end
     
     def index
@@ -36,12 +37,16 @@ class HomeController < ApplicationController
     end
     
     def order
-        @allprice= params[:setnumber].to_i * 5000
+        @allprice= params[:eggnumber].to_i * 500 * params[:weeks].to_i
         
         orderlist=Orderlist.new
         orderlist.name= params[:name]
         orderlist.tel= params[:tel]
-        orderlist.setnumber= params[:setnumber]
+        orderlist.weeks= params[:weeks]
+        orderlist.day= params[:day]
+        orderlist.eggnumber= params[:eggnumber]
+        orderlist.place= params[:place]
+        orderlist.message= params[:message]
         orderlist.allprice= @allprice
         orderlist.save
     end

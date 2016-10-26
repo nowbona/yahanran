@@ -91,3 +91,33 @@ footer {
         height: 70%;
     }
 }
+
+
+.guide:before {
+    content: '';
+    position: absolute;
+    left: 44px;
+    top: -10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #cccccc;
+}
+
+.guide:after {
+    content: '';
+    position: absolute;
+    left: 45px;
+    top: -9px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #fafafa;
+}
+
+.guide {
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    margin-top: 15px;
+    padding: 5px;
+    position: relative;
+    background: #fafafa;
+}
