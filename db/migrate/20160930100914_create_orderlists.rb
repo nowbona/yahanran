@@ -3,7 +3,7 @@ class CreateOrderlists < ActiveRecord::Migration
     create_table :orderlists do |t|
       t.string :name
       t.string :tel
-      t.integer :weeks
+      t.integer :newweeks
       t.string :day
       t.integer :eggnumber
       t.string :place

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161001073110) do
   create_table "orderlists", force: :cascade do |t|
     t.string   "name"
     t.string   "tel"
-    t.integer  "weeks"
+    t.integer  "newweeks"
     t.string   "day"
     t.integer  "eggnumber"
     t.string   "place"
