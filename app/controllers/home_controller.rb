@@ -2,7 +2,6 @@ class HomeController < ApplicationController
 
 
     def about
-        @weeks
     end
     
     def index
