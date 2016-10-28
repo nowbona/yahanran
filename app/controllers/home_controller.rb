@@ -41,7 +41,7 @@ class HomeController < ApplicationController
         orderlist=Orderlist.new
         orderlist.name= params[:name]
         orderlist.tel= params[:tel]
-        orderlist.newweeks= params[:weeks]
+        # orderlist.newweeks= params[:weeks]
         orderlist.day= params[:day]
         orderlist.eggnumber= params[:eggnumber]
         orderlist.place= params[:place]
